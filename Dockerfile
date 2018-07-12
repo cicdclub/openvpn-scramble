@@ -14,7 +14,7 @@ RUN \
   yum install -y epel-release && \
 	yum update -y && \
 # Install dependencies and clean YUM cache
-	yum install -y autoconf.noarch automake file gcc libtool patch quilt git make rpm-build zlib-devel pam-devel openssl openssl-devel lzo-devel lz4-devel.x86_64 net-tools cmake.x86_64 && \
+	yum install -y iptables autoconf.noarch automake file gcc libtool patch quilt git make rpm-build zlib-devel pam-devel openssl openssl-devel lzo-devel lz4-devel.x86_64 net-tools cmake.x86_64 && \
   yum clean all && \
 # Extract source
 	unzip /tmp/master.zip && \
@@ -35,8 +35,8 @@ RUN \
 
 COPY entrypoint.sh /entrypoint.sh
 
-ENTRYPOINT ["/entrypoint.sh"]
-
 EXPOSE 1194
 
 VOLUME ["/etc/openvpn"]
+
+ENTRYPOINT ["/entrypoint.sh"]
