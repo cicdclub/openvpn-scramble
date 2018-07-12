@@ -1,7 +1,7 @@
 FROM centos:7
 MAINTAINER Manuel Carrillo "inetshell@gmail.com"
 
-ENV OPENVPN_VERSION openvpn-2.4.4
+ENV OPENVPN_VERSION openvpn-2.4.6
 
 # Get the OpenVPN source and XOR patch
 ADD http://build.openvpn.net/downloads/releases/${OPENVPN_VERSION}.tar.gz /tmp
