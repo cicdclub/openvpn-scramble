@@ -1,9 +1,5 @@
-#!/bin/bash
+#!/bin/bash -x
 OPENVPN_CONF="/etc/openvpn/server.conf"
-
-# Create symlink to stdout
-rm -rf /var/log/openvpn.log
-ln -s /dev/stdout /var/log/openvpn.log
 
 # Add firewall rules
 iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
