@@ -9,6 +9,8 @@ ADD https://github.com/clayface/openvpn_xorpatch/archive/master.zip /tmp
 
 WORKDIR /tmp
 
+COPY entrypoint.sh /entrypoint.sh
+
 RUN \
 # Update YUM cache
   yum install -y epel-release && \
@@ -31,9 +33,9 @@ RUN \
 # Remove working directory
 	rm -rf /tmp/* && \
 # Create openvpn config directory
-	mkdir /etc/openvpn
-
-COPY entrypoint.sh /entrypoint.sh
+	mkdir /etc/openvpn && \
+# Set permissions to entrypoint.sh
+	chmod u+x /entrypoint.sh
 
 EXPOSE 1194
 
