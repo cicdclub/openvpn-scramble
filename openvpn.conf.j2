@@ -1,0 +1,38 @@
+dev ovpns1
+verb 1
+dev-type tun
+user nobody
+group nobody
+script-security {{ SCRIPT_SECURITY }}
+keepalive {{ KEEPALIVE }}
+ping-timer-rem
+persist-tun
+persist-key
+proto {{ PROTO }}
+cipher {{ CIPHER }}
+ncp-ciphers {{ NCP_CIPHERS }}
+push-peer-info
+auth {{ AUTH }}
+tls-server
+server {{ SERVER }}
+client-config-dir /etc/openvpn/ccd
+lport {{ LPORT }}
+max-clients {{ MAX_CLIENTS }}
+sndbuf 0
+rcvbuf 0
+push "dhcp-option DNS 8.8.8.8"
+push "dhcp-option DNS 8.8.4.4"
+push "block-outside-dns"
+push "register-dns"
+push "redirect-gateway def1"
+duplicate-cn
+ca /etc/openvpn/ca.crt
+cert /etc/openvpn/server.crt
+key /etc/openvpn/server.key
+dh /etc/openvpn/dhparam.pem
+tls-auth /etc/openvpn/tls_auth 0
+comp-lzo {{ COMP_LZO }}
+topology {{ TOPOLOGY }}
+push "redirect-gateway def1 bypass-dhcp bypass-dns"
+scramble {{ SCRAMBLE }}
+management /var/run/openvpn/openvpn.mgmt unix
