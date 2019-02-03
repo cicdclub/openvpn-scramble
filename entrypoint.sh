@@ -59,7 +59,7 @@ iptables -A FORWARD -i ovpns1 -o eth0 -j ACCEPT
 
 echo "Creating tun device"
 mkdir -p /dev/net
-if [[ ! -c /dev/net/tun ]}; then
+if [[ ! -c /dev/net/tun ]]; then
   mknod /dev/net/tun c 10 200
 fi
 
