@@ -12,7 +12,7 @@ ENV OPENVPN_VERSION="openvpn-2.4.5" \
     SERVER="192.168.112.0 255.255.240.0" \
     LPORT="1194" \
     MAX_CLIENTS="1024" \
-    COMP_LZO="yes" \
+    COMPRESS="lz4" \
     TOPOLOGY="subnet" \
     SCRAMBLE="reverse"
 

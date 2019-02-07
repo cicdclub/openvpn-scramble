@@ -13,7 +13,7 @@ if [[ "${CONFIG_SOURCE}" == "ENV" ]]; then
       -e "s|{{ SERVER }}|${SERVER}|g" \
       -e "s|{{ LPORT }}|${LPORT}|g" \
       -e "s|{{ MAX_CLIENTS }}|${MAX_CLIENTS}|g" \
-      -e "s|{{ COMP_LZO }}|${COMP_LZO}|g" \
+      -e "s|{{ COMPRESS }}|${COMPRESS}|g" \
       -e "s|{{ TOPOLOGY }}|${TOPOLOGY}|g" \
       -e "s|{{ SCRAMBLE }}|${SCRAMBLE}|g" \
       /root/openvpn.conf.j2 > "${OPENVPN_CONF}"
