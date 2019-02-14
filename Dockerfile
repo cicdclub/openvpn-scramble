@@ -28,7 +28,7 @@ RUN \
   yum update -y && \
 # Install dependencies and clean YUM cache
   yum install -y iptables autoconf.noarch automake file gcc libtool patch quilt git make rpm-build zlib-devel pam-devel openssl openssl-devel lzo-devel lz4-devel.x86_64 net-tools cmake.x86_64 && \
-  yum install -y socat
+  yum install -y socat && \
   yum clean all && \
 # Extract openvpn source
   unzip /tmp/master.zip && \
