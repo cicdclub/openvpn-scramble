@@ -14,7 +14,8 @@ ENV OPENVPN_VERSION="openvpn-2.4.5" \
     MAX_CLIENTS="1024" \
     COMPRESS="lz4" \
     TOPOLOGY="subnet" \
-    SCRAMBLE="reverse"
+    SCRAMBLE="reverse" \
+    CUSTOM_OPTIONS=""
 
 # Get the OpenVPN source and XOR patch
 ADD http://build.openvpn.net/downloads/releases/${OPENVPN_VERSION}.tar.gz /tmp

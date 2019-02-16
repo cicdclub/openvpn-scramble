@@ -16,6 +16,7 @@ if [[ "${CONFIG_SOURCE}" == "ENV" ]]; then
       -e "s|{{ COMPRESS }}|${COMPRESS}|g" \
       -e "s|{{ TOPOLOGY }}|${TOPOLOGY}|g" \
       -e "s|{{ SCRAMBLE }}|${SCRAMBLE}|g" \
+      -e "s|{{ CUSTOM_OPTIONS }}|${CUSTOM_OPTIONS}|g" \
       /root/openvpn.conf.j2 > "${OPENVPN_CONF}"
 
   if [[ -f "${DHPARAM_PATH}" ]]; then
