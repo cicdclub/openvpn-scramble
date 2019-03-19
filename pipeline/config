@@ -1,0 +1,8 @@
+import groovy.transform.Field
+@Field
+def DOCKER_CRED='dockerhub-cicdclub'
+@Field
+def DOCKER_REPO='cicdclub/openvpn-scramble'
+@Field
+def DOCKER_REG='docker.io'
+return this;
