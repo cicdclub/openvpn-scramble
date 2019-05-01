@@ -19,7 +19,7 @@ if [[ "${CONFIG_SOURCE}" == "ENV" ]]; then
       /root/openvpn.conf.j2 > "${OPENVPN_CONF}"
 
   if [[ "${ENABLE_SCRAMBLE}" == "TRUE" ]]; then
-    sed -e "s|{{ SCRAMBLE }}|${SCRAMBLE}|g" /root/openvpn.conf.j2 >> "${OPENVPN_CONF}"
+    echo "scramble ${SCRAMBLE}" >> "${OPENVPN_CONF}"
   fi
 
   if [[ -f "${DHPARAM_PATH}" ]]; then

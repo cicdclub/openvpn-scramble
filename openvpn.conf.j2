@@ -34,6 +34,5 @@ tls-auth /etc/openvpn/tls_auth 0
 compress {{ COMPRESS }}
 topology {{ TOPOLOGY }}
 push "redirect-gateway def1 bypass-dhcp bypass-dns"
-scramble {{ SCRAMBLE }}
 management /var/run/openvpn/openvpn.mgmt unix
 {{ CUSTOM_OPTIONS }}
