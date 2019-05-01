@@ -1,7 +1,8 @@
 FROM centos:7
 MAINTAINER Juan Manuel Carrillo Moreno "inetshell@gmail.com"
 
-ENV OPENVPN_VERSION="openvpn-2.4.5" \
+ENV ENABLE_SCRAMBLE="TRUE" \
+    OPENVPN_VERSION="openvpn-2.4.5" \
     DHPARAM_SIZE="2048" \
     SCRIPT_SECURITY="3" \
     KEEPALIVE="10 20" \
